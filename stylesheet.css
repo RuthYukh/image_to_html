@@ -1,0 +1,169 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+
+    justify-content: space-between;
+    align-items: stretch; /* Ensure both elements stretch to the same height */
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stats-overview {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 22%;
+}
+
+.graphs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.graph-orders, .graph-transactions {
+    width: 48%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.graph-img {
+    width: 100%;
+    height: auto;
+}/* Container for all progress bars */
+.progress-bars {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Style for individual progress box */
+.progress-box {
+    width: 130%; /* Adjust to fit multiple progress boxes */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Flexbox for alignment */
+.progress-box .d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align elements on the same vertical axis */
+}
+
+/* Style for left-aligned text (number and description) */
+.flatl {
+    display: flex;
+    flex-direction: column; /* Stack the number and description vertically */
+    text-align: left;
+}
+
+/* Style for right-aligned percentage text */
+.flatr {
+    /* margin-left: auto; 
+    text-align: right;
+    font-size: 16px;
+    display: right;
+    align-items: center;  */
+    margin-left: auto; /* Ensures it sticks to the right */
+    text-align: right;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the number */
+.num_in_pb {
+    font-size: 30px;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Text under the number */
+.flatl p:nth-child(2) {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style for the progress bar container */
+.progress-bar {
+    /* background-color: #f8f6f6;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 10px; */
+    background-color: #f8f6f6;
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* Style for the inner progress bar (filled part) */
+.bar {
+    height: 100%;
+    border-radius: 5px;
+    background-color: #42b98c;
+}
+
+/* Specific widths for different progress bars */
+.bar-48 { width: 48%; }
+.bar-60 { width: 60%; }
+.bar-22 { width: 22%; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-overview {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .graphs {
+        flex-direction: column;
+    }
+
+    .graph-orders, .graph-transactions {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .progress-bars {
+        flex-direction: column;
+    }
+
+    .progress-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
